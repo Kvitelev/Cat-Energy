@@ -1,0 +1,122 @@
+.header__intro {
+  min-height: 500px;
+  font-family: "Oswald";
+  color: $white;
+  text-align: center;
+  &-grid {
+    display: grid;
+    grid-template-rows: min-content min-content 360px;
+  }
+  &--bg-cat {
+    background: url(../img/intro/cat.jpg) top no-repeat;
+    background-size: cover;
+    width: auto;
+    height: auto;
+  }
+  &--bg-green {
+    background: url(../img/intro/green-bg.png) top no-repeat;
+    background-size: cover;
+    width: auto;
+    height: 302px;
+  }
+  &--bg-food {
+    background: url(../img/intro/food.png) center 165px no-repeat;
+    background-size: 280px 270px;
+    width: auto;
+    height: auto;
+  }
+  @include tablet {
+    min-height: 850px;
+    color: $black;
+    text-align: start;
+    &-grid {
+      margin-left: 85px;
+      display: block;
+    }
+    &--bg-cat {
+      background: none;
+    }
+    &--bg-green {
+      background: none;
+    }
+    &--bg-food {
+      background: url(../img/intro/food.png) 110px 250px no-repeat;
+      background-size: 630px 600px;
+      width: auto;
+      min-height: 840px;
+    }
+  }
+  @include desktop {
+    min-height: 600px;
+    &--bg-cat {
+      position: absolute;
+      background: url(../img/intro/cat-desktop.jpg) no-repeat;
+      width: 720px;
+      height: 678px;
+      top: -40px;
+      right: 0;
+    }
+    &--bg-green {
+      background: url(../img/intro/green-bg.png) no-repeat;
+      background-size: contain;
+      width: auto;
+      height: auto;
+    }
+    &--bg-food {
+      background: url(../img/intro/food.png) center 130px no-repeat;
+      background-size: 510px 510px;
+      transform: translateX(-230px);
+    }
+    &-grid {
+      position: absolute;
+      top: 180px;
+      right: 460px;
+    }
+  }
+}
+
+.header__title {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  padding-top: 27px;
+  margin-bottom: 25px;
+  @include tablet {
+    font-size: 60px;
+    line-height: 60px;
+    padding-top: 42px;
+    margin-bottom: 41px;
+    width: 450px;
+  }
+}
+
+.header__slogan {
+  margin: 0;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 52px;
+  }
+}
+
+.header__btn {
+  width: 100%;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 10px 0px;
+  margin-bottom: 22px;
+  align-self: end;
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
+    width: 244px;
+    margin: 0;
+    text-align: center;
+    padding: 15px 0px;
+    margin-left: -4px;
+  }
+}
