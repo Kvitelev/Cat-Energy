@@ -1,0 +1,109 @@
+.advantages {
+  margin-bottom: 46px;
+  @include tablet {
+    border-bottom: 1px solid $light-gray;
+  }
+  @include desktop {
+    margin: 0px;
+    border: none;
+  }
+}
+
+.advantages__title {
+  line-height: 40px;
+  margin: 0px;
+  margin-bottom: 40px;
+  @include tablet {
+    padding-top: 13px;
+    margin-bottom: 80px
+  }
+}
+
+.advantages__list {
+  @include tablet {
+    @include flex;
+    flex-wrap: wrap;
+    column-gap: 136px;
+    row-gap: 35px;
+    padding-bottom: 8px;
+  }
+  @include desktop {
+    column-gap: 80px;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  margin-bottom: 26px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-size: 60px 60px;
+  }
+  &--icon-1::after {
+    background: url(../img/icon/adven-inon-1.svg) no-repeat;
+  }
+  &--icon-2::after {
+    background: url(../img/icon/adven-inon-2.svg) no-repeat;
+  }
+  &--icon-3::after {
+    background: url(../img/icon/adven-inon-3.svg) no-repeat;
+  }
+  &--icon-4::after {
+    background: url(../img/icon/adven-inon-4.svg) no-repeat;
+  }
+  @include tablet {
+    margin-bottom: 0px;
+    min-height: 280px;
+    &::after {
+      top: 0px;
+      width: 80px;
+      height: 80px;
+      background-size: 80px 80px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 120px;
+      height: 280px;
+      font-size: 120px 280px;
+    }
+    &--icon-1::before {
+      background: url(../img/icon/adven-namber-1.svg) no-repeat;
+    }
+    &--icon-2::before {
+      background: url(../img/icon/adven-namber-2.svg) no-repeat;
+    }
+    &--icon-3::before {
+      background: url(../img/icon/adven-namber-3.svg) no-repeat;
+    }
+    &--icon-4::before {
+      background: url(../img/icon/adven-namber-4.svg) no-repeat;
+    }
+  }
+}
+
+.adventages__description {
+  margin: 0px;
+  width: 198px;
+  padding-left: 80px;
+  @include tablet {
+    width: 245px;
+    padding-top: 113px;
+    padding-left: 0px;
+    position: relative;
+    order: 1;
+  }
+  @include desktop {
+    padding-top: 110px;
+  }
+}

@@ -1,0 +1,28 @@
+.footer {
+  @include flex-v-center;
+  flex-direction: column;
+  background-color: $gray;
+  padding-top: 30px;
+  &__logo {
+    margin-bottom: 30px
+  }
+}
+
+.footer__list {
+  @include flex;
+  border-top: 1px solid $gray-smok;
+  border-bottom: 1px solid $gray-smok;
+}
+
+.footer__item {
+  padding: 20px 0px;
+}
+
+// .footer__copy {
+//   @include flex-all-sb;
+//   &-acadenmy {
+//     font-size: 16px;
+//     line-height: 18px;
+//     color: inherit;
+//   }
+// }

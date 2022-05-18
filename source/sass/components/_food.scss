@@ -1,13 +1,47 @@
+.food {
+  margin-bottom: 27px;
+  @include tablet {
+    margin-bottom: 45px;
+  }
+  @include desktop {
+    margin-bottom: 71px
+  }
+}
+
+.food__flex {
+  @include desktop {
+    @include flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    row-gap: 30px;
+  }
+}
+
 .food__block {
   background-color: $gray;
   padding-bottom: 17px;
   margin-bottom: 15px;
-  &:last-child {
-    margin-bottom: 27px;
-  }
   &-wrapper {
     padding-left: 20px;
     position: relative;
+  }
+  @include tablet {
+    padding-bottom: 57px;
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    &-wrapper {
+      padding-left: 52px;
+    }
+  }
+  @include desktop {
+    width: 570px;
+    padding-bottom: 59px;
+    margin-bottom: 0px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
   }
 }
 
@@ -46,6 +80,53 @@
       background-size: 67px 50px;
     }
   }
+  @include tablet {
+    font-size: 36px;
+    line-height: 36px;
+    padding-top: 77px;
+    padding-left: 0px;
+    margin-bottom: 24px;
+    &--cat-small {
+      &::after {
+        top: 82px;
+        left: 445px;
+        width: 200px;
+        height: 211px;
+        background-size: 200px 211px;
+      }
+    }
+    &--cat-big {
+      &::after {
+        top: 92px;
+        left: 410px;
+        width: 268px;
+        height: 200px;
+        background-size: 268px 200px;
+      }
+    }
+  }
+  @include desktop {
+    padding-left: 160px;
+    margin-bottom: 73px;
+    &--cat-small {
+      &::after {
+        top: 40px;
+        left: 52px;
+        width: 100px;
+        height: 106px;
+        background-size: 100px 106px;
+      }
+    }
+    &--cat-big {
+      &::after {
+        top: 47px;
+        left: 33px;
+        width: 134px;
+        height: 100px;
+        background-size: 134px 100px;
+      }
+    }
+  }
 }
 
 .food__description {
@@ -53,6 +134,19 @@
   margin-bottom: 22px;
   padding-bottom: 23px;
   border-bottom: 1px solid $gray-smok;
+  @include tablet {
+    width: 375px;
+    border: none;
+    padding-bottom: 0px;
+    margin-bottom: 52px;
+    &--tablet {
+      width: 343px;
+    }
+  }
+  @include desktop {
+    width: 470px;
+    margin-bottom: 27px;
+  }
 }
 
 .food__link {
@@ -71,5 +165,13 @@
     height: 12px;
     background: url(../img/icon/icon-link.svg) no-repeat;
     background-size: 24px 12px;
+  }
+  @include tablet {
+    font-size: 20px;
+    line-height: 30px;
+    &::before {
+      top: 10px;
+      left: 130px;
+    }
   }
 }

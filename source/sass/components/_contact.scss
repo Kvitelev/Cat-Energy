@@ -1,0 +1,54 @@
+.contact {
+  padding: 30px 0px;
+  @include tablet {
+    padding: 60px 40px 58px 40px;
+  }
+  @include desktop {
+    width: 570px;
+    height: 201px;
+    background-color: $white;
+    position: absolute;
+    bottom: 110px;
+    left: 110px;
+    padding: 0px;
+  }
+}
+
+.contact__flex {
+  @include flex-all-sb;
+  @include desktop {
+    height: inherit;
+    padding: 0px;
+    @include flex-h-center;
+    column-gap: 80px;
+  }
+}
+
+.contact__title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  @include tablet {
+    width: 170px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+
+.contact__description {
+  margin: 0px;
+  &-sity {
+    display: block;
+    padding-top: 5px;
+  }
+  @include tablet {
+    &-sity {
+      display: block;
+      padding-top: 15px;
+    }
+  }
+  @include desktop {
+    padding-right: 20px;
+  }
+}
