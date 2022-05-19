@@ -44,6 +44,13 @@ a {
   }
 }
 
+@include tablet {
+  .container-none {
+    margin: 0px;
+    padding: 0px;
+  }
+}
+
 .btn-reset {
   border: none;
   padding: 0;

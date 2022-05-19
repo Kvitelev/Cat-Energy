@@ -1,28 +1,106 @@
 .footer {
-  @include flex-v-center;
-  flex-direction: column;
   background-color: $gray;
-  padding-top: 30px;
-  &__logo {
-    margin-bottom: 30px
+  padding-top: 32px;
+  padding-bottom: 22px;
+  &__flex {
+    @include flex-all-center;
+    flex-direction: column;
+  }
+  @include tablet {
+    padding-top: 90px;
+    padding-bottom: 50px;
+    &__flex {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+  @include desktop {
+    padding-top: 95px;
+  }
+}
+
+.footer__link-logo {
+  display: inline-block;
+  margin-bottom: 30px;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+  @include tablet {
+    margin-bottom: 0px;
   }
 }
 
 .footer__list {
-  @include flex;
+  @include flex-all-center;
+  flex-wrap: wrap;
+  column-gap: 36px;
+  width: 280px;
   border-top: 1px solid $gray-smok;
   border-bottom: 1px solid $gray-smok;
+  margin-bottom: 22px;
+  @include tablet {
+    justify-content: flex-end;
+    border: none;
+    margin-bottom: 0px;
+    width: auto;
+    column-gap: 25px;
+    margin-left: 25px;
+  }
+  @include desktop {
+    margin-left: 30px;
+  }
 }
 
 .footer__item {
-  padding: 20px 0px;
+  padding: 18px 0px;
+  @include tablet {
+    padding: 0px;
+  }
 }
 
-// .footer__copy {
-//   @include flex-all-sb;
-//   &-acadenmy {
-//     font-size: 16px;
-//     line-height: 18px;
-//     color: inherit;
-//   }
-// }
+.footer__logo-social {
+  @include tablet {
+    &--vk {
+      width: 30px;
+      height: 22px;
+    }
+    &--insta {
+      width: 23px;
+      height: 23px;
+    }
+    &--face {
+      width: 28px;
+      height: 33px;
+    }
+  }
+}
+
+.footer__copy {
+  @include flex-all-sb;
+  flex-wrap: wrap;
+  width: 280px;
+  color: inherit;
+  &:active {
+    opacity: 0.5;
+  }
+  &-acadenmy {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  @include tablet {
+    width: 170px;
+    justify-content: center;
+    column-gap: 23px;
+  }
+}
+
+.footer__logo-social:hover,
+.footer__copy-logo:hover {
+  fill: $green;
+  &:active {
+    fill-opacity: 0.5;
+  }
+}

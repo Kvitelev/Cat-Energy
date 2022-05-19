@@ -204,15 +204,27 @@
       background-color: $green;
       border-radius: 50%;
     }
+    &:hover {
+      box-shadow: (0px 2px 4px rgba($black, 0.19));
+    }
+    &:active {
+      border-color: $green;
+    }
   }
 }
 
-.examle__cat-text {
+.examle__cat-btn {
   font-family: "Oswald";
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   color: $black;
+  &:hover {
+    border-bottom: 1px solid $black;
+  }
+  &:active {
+    border: none;
+  }
   @include tablet {
     font-size: 20px;
     line-height: 30px;
