@@ -1,0 +1,212 @@
+.additional-products {
+  @include desktop {
+    margin-bottom: 30px;
+  }
+}
+
+.additional-products__title {
+  position: relative;
+  font-size: 24px;
+  line-height: 24px;
+  padding-top: 5px;
+  margin-bottom: 33px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 19px;
+    right: -247px;
+    width: 100%;
+    border-top: 2px solid $green;
+  }
+  @include tablet {
+    font-size: 36px;
+    line-height: 36px;
+    padding-top: 35px;
+    padding-left: 37px;
+    margin-bottom: 80px;
+    &::after {
+      top: 57px;
+      right: -410px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 57px;
+      right: 708px;
+      width: 100%;
+      border-top: 2px solid $green;
+    }
+  }
+  @include desktop {
+    padding-top: 42px;
+    padding-left: 0px;
+    &::after {
+    top: 67px;
+    right: -371px;
+    }
+    &::before {
+      top: 67px;
+      right: 1262px;
+    }
+  }
+}
+
+.additional-products__flex {
+  @include desktop {
+    @include flex-all-sb;
+    align-items: flex-start;
+  }
+}
+
+.additional-products__wrapper {
+  margin-bottom: 36px;
+  @include tablet {
+    margin-bottom: 60px;
+  }
+}
+
+.additional-products__box {
+  border-top: 1px solid $line-gray;
+  padding-bottom: 18px;
+  &:nth-child(4) {
+    border-bottom: 1px solid $line-gray;
+  }
+  @include tablet {
+    @include flex-all-center;
+    flex-wrap: wrap;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    border-left: 1px solid $line-gray;
+    border-right: 1px solid $line-gray;
+    &-wrapper {
+      @include flex-v-center;
+      justify-content: space-between;
+      width: 632px;
+    }
+  }
+  @include desktop {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 895px;
+    border-left: none;
+    border-right: none;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+}
+
+.additional-products__product {
+  margin: 0px;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $black;
+  padding-top: 13px;
+  margin-bottom: 13px;
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 0px;
+    margin-bottom: 25px;
+    align-self: flex-start;
+  }
+  @include desktop {
+    margin-bottom: 0px;
+  }
+}
+
+.additional-products__key {
+  margin: 0px;
+  font-size: 14px;
+  line-height: 14px;
+  margin-bottom: 15px;
+  @include tablet {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  @include desktop {
+    margin-bottom: 0px;
+    width: 310px;
+  }
+}
+
+.additional-products__details {
+  float: right;
+  @include tablet {
+    margin-left: 50px
+  }
+  @include desktop {
+    padding-right: 20px;
+    margin-left: auto;
+  }
+}
+
+.additional-products__gift {
+  @include flex;
+  position: relative;
+  width: 280px;
+  margin: auto;
+  min-height: 289px;
+  background: url(../img/intro/gift-photo.jpg) no-repeat;
+  background-size: 280px 289px;
+  margin-bottom: 35px;
+  @include tablet {
+    width: 100%;
+    min-height: 200px;
+    background: url(../img/intro/gift-photo-tablet.png) no-repeat;
+    background-size: 100% 200px;
+    margin-bottom: 73px;
+  }
+  @include desktop {
+    width: 245px;
+    min-height: 289px;
+    background: url(../img/intro/gift-photo.jpg) no-repeat;
+    background-size: 245px 289px;
+    margin: 0px;
+  }
+}
+
+.additional-products__discription {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  width: 165px;
+  margin: 0 auto;
+  color: $white;
+  align-self: flex-end;
+  padding-bottom: 42px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 100px;
+    width: 78px;
+    height: 80px;
+    background: url(../img/icon/icon_gift.svg) no-repeat;
+    background-size: 78px 80px;
+  }
+  @include tablet {
+    text-align: start;
+    align-self: center;
+    padding-top: 40px;
+    padding-left: 300px;
+    &::after {
+      left: 80px;
+    }
+  }
+  @include desktop {
+    padding-left: 0px;
+    text-align: center;
+    align-self: flex-end;
+  }
+}
+
+.additional-products-product__btn {
+  @include tablet {
+    width: 632px;
+  }
+  @include desktop {
+    width: 244px;
+  }
+}

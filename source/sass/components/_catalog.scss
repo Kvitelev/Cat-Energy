@@ -1,15 +1,15 @@
 .catalog {
   @include tablet {
-    @include flex;
+    @include flex-all-sb;
     flex-wrap: wrap;
     max-width: 768px;
     margin: auto;
     padding: 0px 30px;
-    // column-gap: 20px;
     row-gap: 140px;
     @include desktop {
       max-width: 1220px;
       padding: 0px 110px;
+      row-gap: 143px;
     }
   }
 }
@@ -17,7 +17,7 @@
 .catalog-line{
   border: 1px solid $gray-smok;
   @include tablet {
-    border: none;
+    display: none;
   }
 }
 
@@ -26,13 +26,17 @@
   @include tablet {
     margin-bottom: 168px;
   }
+  @include desktop {
+    padding-top: 15px;
+    margin-bottom: 163px;
+  }
 }
 
 .catalog__line-product {
   border: 1px solid $light-gray;
   margin-bottom: 19px;
   @include tablet {
-    border: none;
+    display: none;
   }
 }
 
@@ -51,6 +55,14 @@
     width: 324px;
     min-height: 430px;
     margin-bottom: 0px;
+    &--next {
+      background-color: transparent;
+      border: 2px solid $gray;
+      padding-top: 0px;
+    }
+  }
+  @include desktop {
+    width: 245px;
   }
 }
 
@@ -65,6 +77,17 @@
   @include tablet {
     align-self: center;
     width: 248px;
+    margin-bottom: 25px;
+    &--next {
+      margin-bottom: 80px;
+    }
+  }
+  @include desktop {
+    width: 168px;
+    margin-bottom: 20px;
+    &--next {
+      margin-bottom: 80px;
+    }
   }
 }
 
@@ -95,13 +118,35 @@
     text-align: center;
     width: 130px;
     margin: auto;
-    padding-top: 50px;
+    padding-top: 120px;
+    margin-bottom: 21px;
+    &--next {
+      width: 160px;
+      &::after {
+        width: 60px;
+        height: 60px;
+        background-size: 60px 60px;
+        top: 10px;
+        left: 98px;
+      }
+    }
+  }
+  @include desktop {
+    padding-top: 120px;
+    &--next {
+      padding-top: 120px;
+      &::after {
+        top: 8px;
+        left: 55px;
+      }
+    }
   }
 }
 
 .product__list {
   @include tablet {
     border-bottom: 1px solid $line-gray;
+    margin-bottom: 7px;
   }
 }
 
@@ -115,6 +160,11 @@
   @include tablet {
     font-size: 16px;
     line-height: 16px;
+    padding-bottom: 9px;
+    &--next {
+      width: 167px;
+      margin: auto;
+    }
   }
 }
 
@@ -144,10 +194,22 @@
     padding-top: 0px;
     position: absolute;
     top: -40px;
-    left: 73px;
+    left: 90px;
     &--big {
       top: -70px;
       left: 80px;
+      width: 168px;
+      height: 200px;
+    }
+  }
+  @include desktop {
+    width: 150px;
+    height: 170px;
+    top: -50px;
+    left: 45px;
+    &--big {
+      top: -80px;
+      left: 40px;
       width: 168px;
       height: 200px;
     }
@@ -160,8 +222,17 @@
   &--next {
     background-color: $gray;
     color: inherit;
+    &:hover {
+      background-color: $light-gray;
+    }
+    &:active {
+      opacity: 0.9;
+    }
   }
   @include tablet {
     width: 248px;
+  }
+  @include desktop {
+    width: 168px;
   }
 }
