@@ -14,38 +14,30 @@
 }
 
 .header__logo {
+  width: 35px;
+  height: 38px;
+  cursor: pointer;
   &:hover {
     opacity: 0.8;
   }
   &:active {
     opacity: 0.6;
   }
-  &--name {
-    padding-left: 25px;
-  }
-  @include mobile {
-    &--tablet {
-      display: none;
-    }
-    &--desktop {
-      display: none;
-    }
+  &--mobile {
+    width: 102px;
+    height: 19px;
+    padding-left: 50px;
   }
   @include tablet {
+    width: 180px;
+    height: 54px;
     &--mobile {
-      display: none;
-    }
-    &--desktop {
       display: none;
     }
   }
   @include desktop {
-    &--tablet {
-      display: none;
-    }
-    &--desktop {
-      display: block;
-    }
+    width: 202px;
+    height: 59px;
   }
 }
 

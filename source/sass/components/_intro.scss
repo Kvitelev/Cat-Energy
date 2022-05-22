@@ -12,6 +12,10 @@
     background-size: cover;
     width: auto;
     height: auto;
+    @media (min-resolution: 2dppx) {
+      background: url("../img/intro/cat@2x.jpg") top no-repeat;
+      background-size: cover;
+    }
   }
   &--bg-green {
     background: url(../img/intro/green-bg.png) top no-repeat;
@@ -24,6 +28,10 @@
     background-size: 280px 270px;
     width: auto;
     height: auto;
+    @media (min-resolution: 2dppx) {
+      background: url("../img/intro/food@2x.png") center 165px no-repeat;
+      background-size: 280px 270px;
+    }
   }
   @include tablet {
     min-height: 850px;
@@ -40,10 +48,14 @@
       background: none;
     }
     &--bg-food {
-      background: url(../img/intro/food.png) 110px 250px no-repeat;
-      background-size: 630px 600px;
+      background: url(../img/intro/food-tablet.png) 32px 244px no-repeat;
+      background-size: 703px 604px;
       width: auto;
       min-height: 840px;
+      @media (min-resolution: 2dppx) {
+        background: url("../img/intro/food-tablet@2x.png") 32px 244px no-repeat;
+        background-size: 703px 604px;
+      }
     }
   }
   @include desktop {
@@ -51,10 +63,15 @@
     &--bg-cat {
       position: absolute;
       background: url(../img/intro/cat-desktop.jpg) no-repeat;
+      background-size: cover;
       width: 720px;
       height: 678px;
       top: -40px;
       right: 0;
+      @media (min-resolution: 2dppx) {
+        background: url("../img/intro/cat-desktop@2x.jpg") no-repeat;
+        background-size: cover;
+      }
     }
     &--bg-green {
       background: url(../img/intro/green-bg.png) no-repeat;
@@ -63,9 +80,13 @@
       height: auto;
     }
     &--bg-food {
-      background: url(../img/intro/food.png) center 130px no-repeat;
-      background-size: 510px 510px;
+      background: url(../img/intro/food-desktop.png) 67px 138px no-repeat;
+      background-size: 553px 499px;
       transform: translateX(-230px);
+      @media (min-resolution: 2dppx) {
+        background: url("../img/intro/food-desktop@2x.png") 67px 138px no-repeat;
+        background-size: 553px 499px;
+      }
     }
     &-grid {
       position: absolute;

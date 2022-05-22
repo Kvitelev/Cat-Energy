@@ -2,14 +2,16 @@
   background-color: $light-gray-bg;
   padding-bottom: 36px;
   @include tablet {
-    background-color: inherit;
-    padding-bottom: 0px;
+    background: linear-gradient($white 55%, $light-gray-bg 55%);
+    padding-bottom: 65px;
   }
   @include desktop {
-    @include flex;
-    column-gap: 150px;
     background: linear-gradient($white 25%, $light-gray-bg 25%);
     padding-bottom: 65px;
+    &__flex {
+      @include flex;
+      column-gap: 150px;
+    }
   }
 }
 
@@ -132,31 +134,33 @@
   }
 }
 
-.examle__cat {
-  @include tablet {
-    padding-bottom: 65px;
-    background: linear-gradient($white 33%, $light-gray-bg 33%);
-  }
-  @include desktop {
-    padding-bottom: 0px;
-    background: linear-gradient($white 28%, $light-gray-bg 28%);
-  }
-}
-
 .examle__cat-fat {
   width: 250px;
   height: 305px;
   background: url(../img/cat/cat-fat.png) -18px 38px no-repeat;
   background-size: 311px 232px;
+  @media (min-resolution: 2dppx) {
+    background: url("../img/cat/cat-fat@2x.png") -18px 38px no-repeat;
+    background-size: 311px 232px;
+  }
   @include tablet {
     width: 700px;
     min-height: 588px;
-    background: url(../img/cat/cat-50x50.png) 0px 30px no-repeat;
+    background: url(../img/cat/cat-50x50-tablet.png) 0px 30px no-repeat;
     background-size: 700px 632px;
+    @media (min-resolution: 2dppx) {
+      background: url("../img/cat/cat-50x50-tablet@2x.png") 0px 30px no-repeat;
+      background-size: 700px 632px;
+    }
   }
   @include desktop {
     min-height: 517px;
-    background-position: -28px -25px;
+    background: url(../img/cat/cat-50x50-desktop.png) -18px -5px no-repeat;
+    background-size: 700px 619px;
+    @media (min-resolution: 2dppx) {
+      background: url("../img/cat/cat-50x50-desktop@2x.png") -18px -7px no-repeat;
+      background-size: 700px 632px;
+    }
   }
 }
 
@@ -229,15 +233,5 @@
     font-size: 20px;
     line-height: 30px;
     border-bottom: 1px dotted $line-gray;
-  }
-}
-
-@include desktop {
-  .examle__padding-right {
-    padding-right: 0px;
-    margin: 0px;
-  }
-  .examle__padding-left {
-    padding-left: 0px;
   }
 }

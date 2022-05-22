@@ -2,7 +2,7 @@
   position: relative;
   height: 362px;
   &__iframe {
-    width: 100%;
+    width: 100vw;
     height: 362px;
     border: none;
     @include tablet {

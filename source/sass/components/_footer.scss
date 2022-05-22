@@ -21,7 +21,10 @@
 
 .footer__link-logo {
   display: inline-block;
+  width: 128px;
+  height: 24px;
   margin-bottom: 30px;
+  cursor: pointer;
   &:hover {
     opacity: 0.8;
   }

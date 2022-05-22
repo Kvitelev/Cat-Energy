@@ -151,12 +151,20 @@
   background: url(../img/intro/gift-photo.jpg) no-repeat;
   background-size: 280px 289px;
   margin-bottom: 35px;
+  @media (min-resolution: 2dppx) {
+    background: url("../img/intro/gift-photo@2x.jpg") no-repeat;
+    background-size: 280px 289px;
+  }
   @include tablet {
     width: 100%;
     min-height: 200px;
-    background: url(../img/intro/gift-photo-tablet.png) no-repeat;
+    background: url(../img/intro/gift-photo-tablet.jpg) no-repeat;
     background-size: 100% 200px;
     margin-bottom: 73px;
+    @media (min-resolution: 2dppx) {
+      background: url("../img/intro/gift-photo-tablet@2x.jpg") no-repeat;
+      background-size: 100% 200px;
+    }
   }
   @include desktop {
     width: 245px;
