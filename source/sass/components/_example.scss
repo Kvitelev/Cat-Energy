@@ -134,7 +134,26 @@
   }
 }
 
-.examle__cat-fat {
+.examle__cat-bg--skinny {
+  width: 250px;
+  height: 305px;
+  background: url(../img/cat/cat-skinny.png) -18px 38px no-repeat;
+  background-size: 311px 232px;
+  @include tablet {
+    width: 700px;
+    min-height: 585px;
+    background-position: 45px 51px;
+    background-size: 630px 517px;
+  }
+  @include desktop {
+    width: 700px;
+    min-height: 518px;
+    background-position: 22px 0px;
+    background-size: 630px 517px;
+  }
+}
+
+.examle__cat-bg--fat {
   width: 250px;
   height: 305px;
   background: url(../img/cat/cat-fat.png) -18px 38px no-repeat;
@@ -143,6 +162,21 @@
     background: url("../img/cat/cat-fat@2x.png") -18px 38px no-repeat;
     background-size: 311px 232px;
   }
+  @include tablet {
+    width: 700px;
+    min-height: 585px;
+    background-position: 22px 77px;
+    background-size: 576px 489px;
+  }
+  @include desktop {
+    width: 700px;
+    min-height: 518px;
+    background-position: 3px -10px;
+    background-size: 576px 489px;
+  }
+}
+
+.examle__cat-bg {
   @include tablet {
     width: 700px;
     min-height: 588px;
