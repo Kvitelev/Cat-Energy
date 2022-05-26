@@ -139,6 +139,10 @@
   height: 305px;
   background: url(../img/cat/cat-skinny.png) -18px 38px no-repeat;
   background-size: 311px 232px;
+  @media (min-resolution: 2dppx) {
+    background: url("../img/cat/cat-skinny@2x.png") -18px 38px no-repeat;
+    background-size: 311px 232px;
+  }
   @include tablet {
     width: 700px;
     min-height: 585px;

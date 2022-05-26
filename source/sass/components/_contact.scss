@@ -20,6 +20,7 @@
 
 .contact__flex {
   @include flex-all-sb;
+  flex-wrap: wrap;
   @include desktop {
     height: inherit;
     padding: 0px;

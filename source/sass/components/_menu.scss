@@ -1,12 +1,14 @@
 .menu {
   display: none;
   @include tablet {
+    width: 480px;
     display: inline-block;
     position: absolute;
     top: 30px;
     right: 30px;
   }
   @include desktop {
+    width: 600px;
     right: 110px;
   }
 }
@@ -26,6 +28,7 @@
     border: none;
     padding: 0px;
     margin-left: 35px;
+    margin-bottom: 15px;
   }
   @include desktop {
     z-index: 1;

@@ -86,6 +86,10 @@
   flex-wrap: wrap;
   width: 280px;
   color: inherit;
+  &:hover &-logo,
+  &-logo:hover {
+    fill: $green;
+  }
   &:active {
     opacity: 0.5;
   }
@@ -100,9 +104,10 @@
   }
 }
 
-.footer__logo-social:hover,
-.footer__copy-logo:hover {
-  fill: $green;
+.footer__logo-social {
+  &:hover {
+    fill: $green;
+  }
   &:active {
     fill-opacity: 0.5;
   }
