@@ -399,6 +399,7 @@
 }
 
 .form__input {
+  font-family: inherit;
   flex-grow: 1;
   padding: 13px 11px;
   border: 1px solid $gray-input;
@@ -434,6 +435,7 @@
 }
 
 .form__textarea {
+  font-family: inherit;
   box-sizing: border-box;
   width: 100%;
   min-height: 150px;
